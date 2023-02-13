@@ -1,6 +1,7 @@
 name: dependabot-test
 on:
-pull_request:
+  schedule:
+    - cron: '*/5 * * * *' # every 6 hours
 #Sequence of patterns matched against refs/heads
 branches:
 - 'dependabot/**'
