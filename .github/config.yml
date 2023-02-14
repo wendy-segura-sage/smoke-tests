@@ -12,7 +12,7 @@ jobs:
         id: notify
         with:
           slack-bot-user-oauth-access-token: ${{ secrets.DEPENDABOT_SLACK_SECRET }}
-          slack-channel: B04PBMC49NZ
+          slack-channel: C04NBK546KG
           slack-text: Hello! Event "${{ github.event_name }}" in "${{ github.repository }}" 🤓
       - name: Result from "Send Message"
         run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
