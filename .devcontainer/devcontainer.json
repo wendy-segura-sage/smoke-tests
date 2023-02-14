@@ -23,5 +23,12 @@
 		"ghcr.io/devcontainers/features/sshd:1": {
 			"version": "latest"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.vscode-yaml"
+			]
+		}
 	}
 }

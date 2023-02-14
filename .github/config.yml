@@ -1,7 +1,7 @@
 name: dependabot-test
 on: [push, pull_request, issues]
-  push:
-    branches: [ main ]
+push:
+  branches: [ main ]
 jobs:
   dependabot-test:
     runs-on: ubuntu-20.04
