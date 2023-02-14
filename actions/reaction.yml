@@ -29,7 +29,7 @@ jobs:
         uses: archive/github-actions-slack@master
         with:
           slack-function: send-reaction
-          slack-bot-user-oauth-access-token: ${{ secrets.DEPENDABOT_SLACK_SECRET }}
+          slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
           slack-channel: ${{ fromJson(steps.send-message.outputs.slack-result).response.channel }}
           slack-emoji-name: thumbsup
           slack-message-timestamp: ${{ fromJson(steps.send-message.outputs.slack-result).response.message.ts }}
