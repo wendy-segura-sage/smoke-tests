@@ -1,8 +1,6 @@
 name: dependabot-test
 
-on: [push, pull_request, issues]
-  push:
-    branches: [ main ]
+on: [push]
 
 jobs:
   dependabot-test:
