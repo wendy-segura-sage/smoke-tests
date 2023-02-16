@@ -4,5 +4,5 @@ updates:
     directory: "/src/"
     schedule:
       interval: "daily"
-      time: "13:04"
+      time: "14:20"
       timezone: "America/Los_Angeles"
