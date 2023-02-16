@@ -1,0 +1,26 @@
+name: TestSlackMessage
+
+on:
+  schedule:
+    - cron: "0/5 * * * *"
+ 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+jobs:
+  TestSlackMessage:
+    runs-on: ubuntu-20.04
+    name: Test slack notifs
+    steps:
+        - name: Send Slack Message
+          uses: archive/github-actions-slack@master
+          id: send-message
+
+          with:
+            slack-function: send-message
+            slack-bot-user-oauth-access-token: ${{ secrets.DEPENDABOT_SLACK_SECRET }}
+            slack-channel: C04NBK546KG
+            slack-text: Test Message
+            
+        - name: Send "Slack Message" Result
+          run: echo "Data - ${{ steps.send-message.outputs.slack-result }}"
